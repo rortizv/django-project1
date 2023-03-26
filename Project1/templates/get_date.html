@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Django Date</title>
+    </head>
+    <body>
+        <h1>Current date is {{current_date.date}}</h1>
+        <p>Person is {{name}} {{last_name}}</p>
+        <p><strong>Course Themes:</strong></p>
+        <ul>
+            {% if course_themes %}
+                {% for theme in course_themes %}
+                    <li>{{theme}}</li>
+                {% endfor %}
+            {% else %}
+                <li>There are no elements to show</li>
+            {% endif %}
+        </ul>
+    </body>
+</html>
