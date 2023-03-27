@@ -3,6 +3,7 @@ import datetime
 from datetime import datetime
 from django.template import Template, Context
 from django.template import loader
+from django.shortcuts import render
 
 
 class Person:
@@ -24,10 +25,10 @@ def get_date(request):
     # external_doc = open('/home/rortiz/devRafael/Django/Project1/Project1/templates/get_date.html')
     # template = Template(external_doc.read())
     # external_doc.close()
-    external_doc = loader.get_template('get_date.html')
+    # external_doc = loader.get_template('get_date.html')
     # context = Context({'name': p1.name, 'last_name': p1.last_name, 'current_date': now, 'course_themes': course_themes})
-    document = external_doc.render({'name': p1.name, 'last_name': p1.last_name, 'current_date': now, 'course_themes': course_themes})
-    return HttpResponse(document)
+    # document = external_doc.render({'name': p1.name, 'last_name': p1.last_name, 'current_date': now, 'course_themes': course_themes})
+    return render(request, "get_date.html", {'name': p1.name, 'last_name': p1.last_name, 'current_date': now, 'course_themes': course_themes})
 
 def calc_age(request, age, year):
     period = year - 2023

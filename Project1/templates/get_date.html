@@ -2,7 +2,21 @@
     <head>
         <title>Django Date</title>
     </head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+        }
+    </style>
     <body>
+        {% include "navbar.html" %}
         <h1>Current date is {{current_date.date}}</h1>
         <p>Person is {{name}} {{last_name}}</p>
         <p><strong>Course Themes:</strong></p>
