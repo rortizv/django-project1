@@ -44,3 +44,7 @@ def calc_age(request, age, year):
     </html>
     """
     return HttpResponse(html_content)
+
+def javascript_course(request):
+    now = datetime.now()
+    return render(request, "javascript.html", {'current_date': now})
