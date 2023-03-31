@@ -5,7 +5,23 @@
         {% block title %} {% endblock %}
     </title>
 </head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+    }
+</style>
 <body>
+    {% include "navbar.html" %}
+    <h1>Histórico de aprendizaje</h1>
     <h2>Cursos aprendidos</h2>
     {% block content %}
     

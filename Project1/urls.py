@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Project1.views import say_hello, say_goodbye, get_date, calc_age, javascript_course
+from Project1.views import say_hello, say_goodbye, get_date, calc_age, javascript_course, angular_course
 
 
 urlpatterns = [
@@ -24,5 +24,6 @@ urlpatterns = [
     path('goodbye/', say_goodbye),
     path('date/', get_date),
     path('calc_age/<int:age>/<int:year>', calc_age),
-    path('javascript_course/', javascript_course)
+    path('javascript_course/', javascript_course),
+    path('angular_course/', angular_course),
 ]
